@@ -1,0 +1,86 @@
+<md-list class="row">
+  <md-item ng-repeat="page in pages">
+    <md-item-content ng-class="{'col-md-8': page.full, 'col-md-4': !page.full}">
+      <div class="md-tile-left">
+          <img ng-src="{[{ page.thumbnail }]}" class="thumbnail" alt="{[{ page.thumbnail_alt }]}" height="300">
+      </div>
+      <md-card class="md-tile-content" style="background: #efefef">
+        <md-card-content>
+            <h3><strong>{[{ page.subject }]}</strong></h3>
+            <h4>By {[{ page.author }]}</h4>
+            <p>{[{ page.description }]}</p>
+        </md-card-content>
+      </md-card>
+    </md-item-content>
+  </md-item>
+</md-list>
+
+<md-whiteframe class="md-whiteframe-z1">
+    <md-toolbar class="md-warn">
+        <div class="md-toolbar-tools">
+          <span class="md-flex">Présentation</span>
+        </div>
+    </md-toolbar>
+    <md-content class="md-padding" style="padding: 24px; background: #efefef">
+        <p>
+          <span>
+            <strong>One ID</strong> c’est la nouvelle plateforme de communication de Skema :<br />
+            <md-list layout flex>
+              <md-item>
+                <md-item-content>
+                  <md-card>
+                    <md-button class="md-warn md-raised md-hue-2">Vie associative</md-button>
+                    <md-card-content>Retrouvez ici toutes les actualités sur la vie associative</md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
+              <md-item>
+                <md-item-content>
+                  <md-card>
+                    <md-button class="md-warn md-hue-2">Campagne BDE</md-button>
+                    <md-card-content>Soutenez les campagnes</md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
+              <md-item>
+                <md-item-content>
+                  <md-card>
+                    <md-button class="md-warn md-hue-2">Vie sportive</md-button>
+                    <md-card-content>Suivez l'actualité de la vie sportive</md-card-content>
+                  </md-card>
+                </md-item-content>
+              </md-item>
+            </md-list>
+          </span>
+        </p>
+        <center>
+            <iframe
+                width="420"
+                height="315"
+                src="https://www.youtube.com/embed/uEN6MDNu3h8"
+                frameborder="0" allowfullscreen>
+            </iframe>
+        </center>
+    </md-content>
+</md-whiteframe>
+
+<div class="component">
+	<!-- Start Nav Structure -->
+	<button class="md-fab md-primary cn-button" id="cn-button" aria-label="Menu">
+        <span class='fa fa-bars'></span>
+    </button>
+	<div class="cn-wrapper" id="cn-wrapper">
+	    <ul>
+	      <li><a href="#"><span class="fa fa-photo"></span></a></li>
+	      <li><a href="#"><span class="fa fa-headphones"></span></a></li>
+	      <li><a href="#"><span class="fa fa-home"></span></a></li>
+	      <li><a href="#"><span class="fa fa-microphone"></span></a></li>
+	      <li><a href="#/contact"><span class="fa fa-at"></span></a></li>
+	     </ul>
+	</div>
+	<div id="cn-overlay" class="cn-overlay"></div>
+	<!-- End Nav Structure -->
+</div>
+
+<script src="/js/polyfills.js"></script>
+<script src="/js/demo1.js"></script>

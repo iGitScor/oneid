@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr" data-ng-app="oneid">
+
+<head>
+  <title>OneID - Skema Web Radio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="/img/icons/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="/img/icons/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/icons/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/icons/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/icons/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/icons/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/icons/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/icons/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/icons/apple-touch-icon-152x152.png" />
+
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.css" />
+	<link rel="stylesheet" type="text/css" href="/css/component1.css" />
+
+	<link rel="stylesheet" href="/css/style.min.css" type="text/css" />
+	<script src="/js/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+
+  <div layout="column" tabIndex="-1" role="main" flex>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <div layout="row" flex class="fill-height">
+          <div class="md-toolbar-item md-breadcrumb">
+              <h1>
+                OneID
+              </h1>
+          </div>
+
+          <span flex></span> <!-- use up the empty space -->
+
+          <div class="md-toolbar-item md-tools" layout="row">
+            <div>
+              <md-button>
+                <a href="#/radio" class="md-button md-default-theme">Association</a>
+              </md-button>
+            </div>
+            <md-button>
+              <a href="#/radio" class="md-button md-default-theme">Radio</a>
+            </md-button>
+
+            <md-button>
+              <a href="#/blog" class="md-button md-default-theme">Blog</a>
+            </md-button>
+          </div>
+        </div>
+      </div>
+    </md-toolbar>
+
+    <md-content ng-view md-scroll-y flex class="md-padding" md-theme="docs-dark" style="background: url('img/background.png')"></md-content>
+
+    <footer ng-controller="BottomSheetExample" style="background: #efefef">
+      <div class="bottom-sheet-demo inset" layout="row" layout-sm="row" layout-align="center" layout-margin>
+        <md-content flex="25" layout-padding>
+          <div class="copyright">
+            <div class="copytext">
+
+            <div class="footheading"><strong>A propos de OneID</strong></div>
+
+            <p>OneID est une radio libre pour les étudiants ou futurs pensionnaires du campus de Skema Sophia Antipolis. OneId a été fondé en 2013 puis refondu en 2015 par Antoine Michou.</p>
+
+            <p>
+              &copy; Copyright 2015 - 2015 OneID Skema.<br>
+              <!-- Copyright: Sébastien Correaud -->
+              All Rights Reserved. <small>[<a href="/#/a-propos" title="Terms of Use">Politique d'utilisation</a>]</small>
+            </p>
+
+            </div>
+          </div>
+        </md-content>
+        <md-content class="col-md-3" flex="50">
+        </md-content>
+        <md-content flex="10" layout="column" layout-padding class="md-whiteframe-z1">
+          <md-button class="md-primary" ng-click="showListBottomSheet($event)">
+            <i class="fa fa-share-alt fa-2x"></i> Partager
+          </md-button>
+          <md-content layout="row" layout-padding layout-align="center">
+            <md-button class="md-fab" aria-label="FACEBOOK">
+              <i class="fa fa-facebook"></i>
+            </md-button>
+            <span flex="5"></span>
+            <md-button class="md-fab" aria-label="TWITTER">
+              <i class="fa fa-twitter"></i>
+            </md-button>
+          </md-content>
+        </md-content>
+        <md-content flex="10" layout="column" layout-padding class="md-whiteframe-z1">
+          <md-button class="md-primary" ng-click="showGridBottomSheet($event)">
+            <i class="fa fa-user-plus fa-2x"></i> Navigation
+          </md-button>
+          <md-content layout-padding layout-align="center">
+            <md-button class="md-accent md-accent-raised" scroll-top><i class="fa fa-arrow-up fa-2x"></i> Back top Top</md-button>
+          </md-content>
+        </md-content>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="/js/app.min.js"></script>
+
+  <script type="text/javascript" src="/js/angular.js"></script>
+  <script type="text/javascript" src="/js/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/angular-animate.min.js"></script>
+  <script type="text/javascript" src="/js/angular-aria.min.js"></script>
+  <script type="text/javascript" src="/js/angular-material.min.js"></script>
+
+  <script type="text/javascript" src="/app/application.js"></script>
+  <script type="text/javascript" src="/app/controllers/home.controller.js"></script>
+  <script type="text/javascript" src="/app/directives/home.directive.js"></script>
+
+</body>
+
+</html>
